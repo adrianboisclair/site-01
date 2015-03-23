@@ -1,0 +1,547 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #e6e6e6;
+    overflow-x: hidden;
+}
+
+.container {
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+
+}
+
+/*Beginning of Header*/
+header {
+    display: flex;
+    width: 100%;
+    height: 6em;
+}
+
+.main-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-header h1 {
+    font-size: 3vw;
+    color: #7f7f7f;
+    /*font-family: 'Raleway', sans-serif;*/
+    /*text-transform: uppercase;*/
+    font-family: 'Clicker Script', cursive;
+    text-align: center;
+}
+
+.main-header span {
+    font-size: 4vw;
+}
+
+.main-header p {
+    font-size: 1.8vw;
+    color: #7f7f7f;
+    font-family: 'Raleway', sans-serif;
+    text-transform: lowercase;
+    /*font-family: 'Clicker Script', cursive;*/
+    text-align: center;
+
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.line span {
+    background-color: #d0d0d0;
+    height: 1px;
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1vw;
+}
+
+nav ul li a {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.0);
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: .8em;
+    height: 2em;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    width: 100px;
+
+}
+
+nav ul li a:hover {
+    background: #cdcdcd;
+    text-decoration: none;
+}
+
+#share {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#share-options {
+    background-color: #fff;
+    text-align: center;
+    clear: both;
+    padding: 15px;
+    border: 10px solid #e2e2e2;
+}
+
+.modal {
+    position: absolute;
+    z-index: 1000;
+}
+.modal-content {
+
+}
+
+button.modal-close {
+    background-color: #ed9dc3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 10px 9px 10px;
+    margin: 10px 0px 0px 0px;
+    display: inline-block;
+    float: right;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/*End of Header*/
+
+/*Main Content*/
+main {
+    margin: 0;
+    padding: 0;
+}
+
+/*Main Image*/
+figcaption {
+    /*display: none;*/
+    /*background-color: rgba(255,255,255,0.2);*/
+    border-radius: 5px;
+    position: relative;
+    top: -100px;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-image {
+    align-items: center;
+    background-size: cover;
+    background: url("../img/floral-bg-02.png") 75% 50%;
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 0;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+    width: 100%;
+}
+.main-image:hover {
+    /*background: url('../img/.jpg') center;*/
+    background: url('../img/life-coaching.jpg') 75% 50% no-repeat;
+}
+
+.main-image h3 {
+    font-family: 'Clicker Script', cursive;
+    font-size: 5vw;
+    text-shadow: 1px 0 1px gray;
+    margin-bottom: 1em;
+}
+.main-image p {
+    font-size: 3vw;
+    text-shadow: 0 1px 0 gray;
+    font-family: 'Clicker Script', cursive;
+}
+
+/*Sections*/
+#info-section {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: solid .7em #d2d2d2;
+    height: auto;
+    background-color: rgba(255, 234, 241, 0.63);
+
+}
+/*Banner section*/
+.bas {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 8em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.banner {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    /*border: 1em solid #ffffff;*/
+    /*padding: 35px 20px 35px 40px;*/
+    /*margin-bottom: 40px!important;*/
+    background: #7f7f7f;
+    width: 90%;
+    box-shadow: 1px 1px 1px #000000;
+
+
+}
+.banner h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 54px;
+    color: white;
+}
+a.button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    /*border-bottom: 3px solid #333;*/
+    background-color: rgba(205, 0, 11, 0.85);
+    border-radius: 5px;
+    height: 35px;
+    width: 100px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    text-decoration: none;
+    justify-content: center;
+    box-shadow: 1px 1px 1px #000000;
+    /*padding: 10px 30px 7px;*/
+}
+a.button:hover {
+    background-color: rgba(37, 0, 141, 0.46);
+}
+/*Blog posts on homepage*/
+/*.blog-post {*/
+    /*border: 10px solid #ffffff;*/
+    /*display: flex;*/
+    /*padding-top: 25px;*/
+    /*padding-bottom: 25px;*/
+    /*min-width: 400px;*/
+    /*max-width: 400px;*/
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+
+/*}*/
+/*.blog-post p:nth-child(3) {*/
+    /*align-self: center;*/
+    /*margin-left: 2em;*/
+    /*margin-right: 2em;*/
+    /*flex-grow: 1;*/
+/*}*/
+/*.blog-post p:nth-child(4) {*/
+    /*display: flex;*/
+    /*margin-left: 2em;*/
+    /*margin-right: 2em;*/
+/*}*/
+/*.blog-post h1 {*/
+    /*font-size: 2em;*/
+    /*font-family: 'Raleway', sans-serif;*/
+    /*margin-left: .5em;*/
+    /*margin-right: .5em;*/
+    /*margin-bottom: .5em;*/
+/*}*/
+/*.blog-post h2 {*/
+    /*font-size: 1em;*/
+    /*font-family: 'Raleway', sans-serif;*/
+    /*margin-left: 4em;*/
+    /*margin-right: 4em;*/
+
+/*}*/
+/*.blog-post p {*/
+    /*font-size: 16px;*/
+    /*font-family: 'Raleway', sans-serif;*/
+/*}*/
+.bottom-info h1 {
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+.bottom-info h2 {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 4em;
+    margin-right: 4em;
+
+}
+.bottom-info p {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+.small-photo {
+    background: url("../img/nutrition-facts.jpg");
+    background-size: cover;
+
+}
+em {
+    font-style: italic;
+    font-size: 14px;
+}
+iframe {
+    display: flex;
+    /*width: 100vw;*/
+    /*height: 100vw;*/
+
+    /*max-width: 360px;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 100%;
+}
+.text-left {
+    display: inline-flex;
+    /*flex-wrap: nowrap;*/
+    flex-direction: column;
+    justify-content: center;
+    border: solid 1px red;
+}
+
+/*Mailing list section */
+.mailing-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top: solid gray .1em;
+}
+.mailing-list p {
+    margin: .5em;
+}
+
+.mailing-list:nth-child(3){
+    margin:.5em;
+}
+.mailing-list h1 {
+    margin-top: 1em;
+
+}
+.mailing-list legend {
+    font-family: 'Raleway', sans-serif;
+}
+.mailing-list form {
+    margin-top: 10%;
+    margin-left: 2em;
+}
+.mailing-list article {
+    /*justify-content: space-between;*/
+    border: solid 1px #7f7f7f;
+    width: 32%;
+    /*min-width: 250px;*/
+    /*max-width: 200px;*/
+    /*min-height: 200px;*/
+    /*max-height: 400px;*/
+    margin-top: 2em;
+    margin-bottom: .5em;
+    height: 20em;
+}
+#email {
+    background-color: lightgray;
+    border-style: none;
+}
+
+/*Footer Section*/
+footer {
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
+footer h6 {
+    font-size: 9px;
+}
+
+
+/*large screen 1024px*/
+
+@media only screen and (min-width: 1051px) {
+    .container {
+        width: 75%;
+    }
+
+    #nav-menu-icon {
+        display: none;
+    }
+
+    /*set up header for large screens*/
+    .main-header {
+        display: flex;
+    }
+
+    /*.main-header span {*/
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*}*/
+}
+
+/*med screen >700 <1024px */
+@media only screen and (min-width: 701px) and (max-width: 1050px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #nav-menu-icon {
+        display: none;
+    }
+
+    .main-header h1 span {
+        font-size: 8vw;
+    }
+}
+
+/*med-small screen >480px <700px*/
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #nav-menu-icon {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: .2em;
+        margin-bottom: .2em;
+    }
+
+    .main-header h1 span {
+        font-size: 10vw;
+    }
+
+    .main-header p {
+        font-size: 4vw;
+    }
+    .slide-text h1 {
+        font-size: 6vw;
+    }
+    .slide-text p {
+
+        font-size: 6vw;
+    }
+    .banner {
+        display: block;
+    }
+}
+
+/*small screen <479px*/
+@media only screen and (min-width: 0px) and (max-width: 809px) {
+    nav {
+        display: none;
+
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #nav-menu-icon {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: .2em;
+        margin-bottom: .2em;
+
+    }
+
+    .main-header {
+        margin-bottom: 0;
+    }
+
+    .main-header h1 span {
+        font-size: 10vw;
+        margin-bottom: 0;
+    }
+
+    .main-header p {
+        font-size: 4vw;
+        margin-bottom: 0;
+    }
+    .slide-text h1 {
+        font-size: 12vw;
+    }
+    .slide-text p {
+
+        font-size: 6vw;
+    }
+    .blog-post h1 {
+        font-size: 6vw;
+    }
+    .blog-post p {
+            font-size: 4vw;
+    }
+    .mailing-list article {
+        min-width: 100%;
+        min-height: 250px;
+    }
+    .banner {
+        /*display: flex;*/
+        text-align: center;
+        height: 100px;
+        align-content: space-between;
+    }
+    .banner h3 {
+        font-size: 4vw;
+    }
+    .button {
+        margin-left: 10px;
+    }
+    .main-image h3 {
+        font-family: 'Clicker Script', cursive;
+        font-size: 10vw;
+        margin-bottom: 1em;
+    }
+    .main-image p {
+        font-size: 6vw;
+        font-family: 'Clicker Script', cursive;
+    }
+}
