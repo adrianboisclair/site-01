@@ -73,6 +73,10 @@ header {
 nav {
     display: flex;
     justify-content: center;
+    /*border: solid 1px red;*/
+    background-color: #B71C1C;
+    height: 1.5em;
+    align-items: center;
 }
 
 nav ul {
@@ -85,6 +89,7 @@ nav ul li {
     display: flex;
     margin-left: 1em;
     margin-right: 1vw;
+
 }
 
 nav ul li a {
@@ -94,7 +99,7 @@ nav ul li a {
     color: black;
     display: flex;
     font-family: 'Raleway', sans-serif;
-    font-size: .8em;
+    font-size: .6em;
     height: 2em;
     justify-content: center;
     text-decoration: none;
@@ -104,7 +109,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #cdcdcd;
+    background: rgba(255,255,255,0.25);
     text-decoration: none;
 }
 
@@ -136,7 +141,7 @@ button.modal-close {
     border: none;
     border-radius: 4px;
     padding: 7px 10px 9px 10px;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
     display: inline-block;
     float: right;
     letter-spacing: 0.1em;
@@ -149,33 +154,324 @@ button.modal-close {
 main {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-/*Main Image*/
-figcaption {
-    /*display: none;*/
-    /*background-color: rgba(255,255,255,0.2);*/
-    border-radius: 5px;
-    position: relative;
-    top: -100px;
-    height: 200px;
-    width: 100%;
-    text-align: center;
-}
-
-.main-image {
-    align-items: center;
-    background-size: cover;
-    background: url("../img/floral-bg-02.png") 75% 50%;
+.content-wrapper {
     display: flex;
-    height: 70vh;
-    justify-content: center;
-    margin: 0 auto;
-    padding-top: 0;
-    position: relative;
-    transition: background-image 1s ease-in-out;
-    width: 100%;
+    justify-content: space-between;
+    margin: .25em;
+    height: 650px;
+    border: solid red 1px;
+    padding: 24px 21px 0;
 }
+.content-wrapper div {
+    width: 100%;
+    padding: .25em;
+        /*border: solid blue 1px;*/
+}
+
+.left-col {
+    display: flex;
+    min-width: 150px;
+    max-width: 200px;
+    margin-right: .25em;
+    border: solid 1px lime;
+}
+.right-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid 1px purple;
+
+}
+#right-col-banner {
+    border: solid blue 1px;
+    height: 200px;
+    overflow: hidden;
+}
+
+/*Slider*/
+@-webkit-keyframes sliderFadeInOut {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:1;
+    }
+    75% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-moz-keyframes sliderFadeInOut {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:1;
+    }
+    75% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-o-keyframes sliderFadeInOut {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:1;
+    }
+    75% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@keyframes sliderFadeInOut {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:1;
+    }
+    75% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+#slider {
+    display: flex;
+    position:relative;
+    height:250px;
+    width:600px;
+    margin:0 auto;
+    overflow: hidden;
+
+}
+#slider img {
+    position:absolute;
+    left:0;
+    width: 600px;
+    height: 250px;
+}
+/*slide 2*/
+#slider img:nth-of-type(1) {
+
+    -webkit-animation-name: sliderFadeInOut;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-delay: 0s;
+
+
+    -moz-animation-name: sliderFadeInOut;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 4s;
+    -moz-animation-direction: alternate;
+    -moz-animation-delay: 0s;
+
+    -o-animation-name: sliderFadeInOut;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 4s;
+    -o-animation-direction: alternate;
+    -o-animation-delay: 0s;
+
+    animation-name: sliderFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-delay: 0s;
+
+}
+/*slide 3*/
+#slider img:nth-of-type(2) {
+    -webkit-animation-name: sliderFadeInOut;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-delay: 0s;
+
+    -moz-animation-name: sliderFadeInOut;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 4s;
+    -moz-animation-direction: alternate;
+    -moz-animation-delay: 0s;
+
+    -o-animation-name: sliderFadeInOut;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 4s;
+    -o-animation-direction: alternate;
+    -o-animation-delay: 0s;
+
+    animation-name: sliderFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: normal;
+    animation-delay: 0s;
+}
+
+/*slide 4*/
+#slider img:nth-of-type(3) {
+    -webkit-animation-name: sliderFadeInOut;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-delay: 0s;
+
+    -moz-animation-name: sliderFadeInOut;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 4s;
+    -moz-animation-direction: alternate;
+    -moz-animation-delay: 0s;
+
+    -o-animation-name: sliderFadeInOut;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 4s;
+    -o-animation-direction: alternate;
+    -o-animation-delay: 0s;
+
+    animation-name: sliderFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-delay: 0s;
+}
+/*slide 1*/
+#slider img:nth-of-type(4) {
+    -webkit-animation-name: sliderFadeInOut;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-direction: reverse;
+    -webkit-animation-delay: 0s;
+
+    -moz-animation-name: sliderFadeInOut;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 4s;
+    -moz-animation-direction: alternate;
+    -moz-animation-delay: 0s;
+
+    -o-animation-name: sliderFadeInOut;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 4s;
+    -o-animation-direction: alternate;
+    -o-animation-delay: 0s;
+
+    animation-name: sliderFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+
+/*End of slider*/
+
+#right-col-content { /* this is the group and corporate ad*/
+    display: flex;
+    /*border: solid red 1px;*/
+    flex-direction: column;
+    /*max-width: 325px;*/
+    width: 48%;
+    align-items: center;
+
+}
+#right-col-content-left {
+    display: flex;
+    width: 48%;
+}
+.content-2-col-1 {
+    display:flex;
+    background: url('../img/group-01.jpg') 100% 100% no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+    margin-bottom: 1em;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+.content-2-col-1 a, .content-2-col-2 a {
+    color: black;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.25);
+    font-size: 12px;
+    padding: .25em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color .5s ease-in-out;
+
+}
+.content-2-col-1 a:hover, .content-2-col-2 a:hover {
+    background-color: rgba(255,255,255,0.25);
+}
+.content-2-col-2 {
+    display:flex;
+    background: url('../img/corporate-01.jpg') 100% 100% no-repeat;
+    background-size: cover;
+    height: 180px;
+    max-width: 100%;
+    margin-bottom: 1em;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+p {
+    text-indent: 40px;
+    margin-bottom: .5em;
+}
+#text-content {
+    text-align: justify;
+}
+/*Main Image*/
+/*figcaption {*/
+    /*border-radius: 5px;*/
+    /*position: relative;*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.main-image {*/
+    /*align-items: center;*/
+    /*background-size: cover;*/
+    /*background: url("../img/floral-bg-02.png") 75% 50%;*/
+    /*display: flex;*/
+    /*height: 70vh;*/
+    /*justify-content: center;*/
+    /*margin: 0 auto;*/
+    /*padding-top: 0;*/
+    /*position: relative;*/
+    /*transition: background-image 1s ease-in-out;*/
+    /*width: 100%;*/
+/*}*/
 .main-image:hover {
     /*background: url('../img/.jpg') center;*/
     background: url('../img/life-coaching.jpg') 75% 50% no-repeat;
@@ -242,7 +538,7 @@ a.button {
     text-transform: capitalize;
     cursor: pointer;
     /*border-bottom: 3px solid #333;*/
-    background-color: rgba(205, 0, 11, 0.85);
+    /*background-color: rgba(205, 0, 11, 0.85);*/
     border-radius: 5px;
     height: 35px;
     width: 100px;
@@ -402,7 +698,7 @@ footer h6 {
 
 @media only screen and (min-width: 1051px) {
     .container {
-        width: 75%;
+        width: 980px;
     }
 
     #nav-menu-icon {
@@ -424,7 +720,7 @@ footer h6 {
 @media only screen and (min-width: 701px) and (max-width: 1050px) {
     .container {
         width: 100%;
-        border-radius: 0;
+        border-radius: 5px;
     }
 
     #nav-menu-icon {
@@ -432,7 +728,7 @@ footer h6 {
     }
 
     .main-header h1 span {
-        font-size: 8vw;
+        /*font-size: 4vw;*/
     }
 }
 
@@ -461,13 +757,13 @@ footer h6 {
     .main-header p {
         font-size: 4vw;
     }
-    .slide-text h1 {
-        font-size: 6vw;
-    }
-    .slide-text p {
+    /*.slide-text h1 {*/
+        /*font-size: 6vw;*/
+    /*}*/
+    /*.slide-text p {*/
 
-        font-size: 6vw;
-    }
+        /*font-size: 6vw;*/
+    /*}*/
     .banner {
         display: block;
     }
@@ -506,13 +802,13 @@ footer h6 {
         font-size: 4vw;
         margin-bottom: 0;
     }
-    .slide-text h1 {
-        font-size: 12vw;
-    }
-    .slide-text p {
+    /*.slide-text h1 {*/
+        /*font-size: 12vw;*/
+    /*}*/
+    /*.slide-text p {*/
 
-        font-size: 6vw;
-    }
+        /*font-size: 6vw;*/
+    /*}*/
     .blog-post h1 {
         font-size: 6vw;
     }
