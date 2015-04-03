@@ -6,7 +6,7 @@ html, body {
 body {
     display: flex;
     justify-content: center;
-    background-color: #e6e6e6;
+    background-color: #2f5119;
     overflow-x: hidden;
 }
 
@@ -22,7 +22,7 @@ body {
 header {
     display: flex;
     width: 100%;
-    height: 6em;
+
 }
 
 .main-header {
@@ -31,6 +31,7 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    height: 8em;
 }
 
 .main-header h1 {
@@ -146,6 +147,19 @@ button.modal-close {
     float: right;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.logo {
+    background: url("../img/shana_munoz_logo.png") 50% 50% no-repeat;
+    background-size: contain;
+    height: 75px;
+    min-width: 400px;
+
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
 }
 
 /*End of Header*/
@@ -709,6 +723,7 @@ footer h6 {
     .main-header {
         display: flex;
     }
+
 
     /*.main-header span {*/
     /*display: flex;*/
